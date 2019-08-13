@@ -2,10 +2,10 @@
 
 const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
-/* 
 
-  //Given this problem: 
-  
+
+  //Given this problem:
+
   function firstItem(arr, cb) {
     // firstItem passes the first item of the given array to the callback function.
   }
@@ -17,35 +17,92 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
     return cb(arr[0]);
   }
 
-  // Function invocation 
+  // Function invocation
   firstItem(items, function(first) {
     console.log(first)
   });
 
-*/
+
 
 
 function getLength(arr, cb) {
   // getLength passes the length of the array into the callback.
+  return cb(list.length);
 }
+
+const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
+
+function getLength(arr, cb) {
+  return cb(arr.length);
+}
+
+getLength(items, (LengthOfList) => {
+  console.log(LengthOfList);
+});
+
 
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
 }
 
+function lastItem(arr, cb) {
+  return cb(arr.slice(-1)[0]);
+}
+
+lastItem(items, function(last) {
+  console.log(last)
+});
+
+
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
 }
 
+const x = 1
+const y = 2
+
+function sumNums(x, y, cb) {
+  return cb(x + y);
+}
+
+sumNums(x, y, function(sum) {
+  console.log(sum)
+});
+
+
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
 }
+
+const x = 4
+const y = 8
+
+function multiplyNums(x, y, cb) {
+  return cb(x * y);
+}
+
+multiplyNums(x, y, function(sum) {
+  console.log(sum)
+});
+
+
 
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
 }
 
+const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
+
+function contains(item, list, cb) {
+  return cb(list, item);
+}
+
+const testForItems = function(list, item) {
+  return list.includes(item);
+}
+
+console.log(contains('Pencil', items, testForItems));
 /* STRETCH PROBLEM */
 
 function removeDuplicates(array, cb) {
