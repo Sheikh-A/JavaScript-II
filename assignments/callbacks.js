@@ -30,7 +30,7 @@ function getLength(arr, cb) {
   return cb(list.length);
 }
 
-const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
+// const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
 function getLength(arr, cb) {
   return cb(arr.length);
@@ -74,14 +74,14 @@ function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
 }
 
-const x = 4
-const y = 8
+const a = 4
+const b = 8
 
-function multiplyNums(x, y, cb) {
-  return cb(x * y);
+function multiplyNums(a, b, cb) {
+  return cb(a * b);
 }
 
-multiplyNums(x, y, function(sum) {
+multiplyNums(a, b, function(sum) {
   console.log(sum)
 });
 
@@ -92,7 +92,7 @@ function contains(item, list, cb) {
   // Pass true to the callback if it is, otherwise pass false.
 }
 
-const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
+// const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
 function contains(item, list, cb) {
   return cb(list, item);
@@ -105,8 +105,8 @@ const testForItems = function(list, item) {
 console.log(contains('Pencil', items, testForItems));
 /* STRETCH PROBLEM */
 
-function removeDuplicates(array, cb) {
-  // removeDuplicates removes all duplicate values from the given array.
-  // Pass the duplicate free array to the callback function.
-  // Do not mutate the original array.
-}
+// function removeDuplicates(array, cb) {
+//   // removeDuplicates removes all duplicate values from the given array.
+//   // Pass the duplicate free array to the callback function.
+//   // Do not mutate the original array.
+// }

@@ -55,13 +55,13 @@ const runners = [{"id":1,"first_name":"Charmain","last_name":"Seiler","email":"c
 
 // ==== Challenge 1: Use .forEach() ====
 // The event director needs both the first and last names of each runner for their running bibs.  Combine both the first and last names into a new array called fullName.
-let fullName = [];
+let fullNames1 = [];
 
-const fullName = runners.map((last_name) => {
+const fullNames = runners.map((last_name) => {
   return {'first_name': last_name.first_name, 'last_name': last_name.last_name};
 });
 
-console.log(fullName)
+console.log(fullNames)
 
 // ==== Challenge 2: Use .map() ====
 // The event director needs to have all the runner's first names converted to uppercase because the director BECAME DRUNK WITH POWER. Convert each first name into all caps and log the result
@@ -86,7 +86,7 @@ console.log(largeShirtSizes)
 
 // ==== Challenge 4: Use .reduce() ====
 // The donations need to be tallied up and reported for tax purposes. Add up all the donations into a ticketPriceTotal array and log the result
-let ticketPriceTotal = [];
+let ticketPriceTotals = [];
 
 
 const ticketPriceTotal = runners.reduce(function(acc, dollars){
@@ -99,14 +99,14 @@ console.log(ticketPriceTotal);
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
-Small shirt_size
+// Small shirt_size
 
 let smallShirts = runners.filter(function(current) {
   return current.shirt_size === 'S';
 });
 
 // Problem 2
-Last Name all caps
+// Last Name all caps
 
 let lastNameCaps = runners.map(function(current) {
   return current.last_name.toUpperCase();
@@ -115,6 +115,6 @@ let lastNameCaps = runners.map(function(current) {
 
 // Problem 3
 
-let emailList = [];
-runners.forEach(person => emailList.push({id:person.id, first_name, email:person.email});
-console.log(emailList);
+// let emailList1 = [];
+// runners.forEach(person => emailList.push({id:person.id, first_name, email:person.email});
+// console.log(emailList);
