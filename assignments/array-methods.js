@@ -76,7 +76,6 @@ console.log(allCaps);
 // The large shirts won't be available for the event due to an ordering issue.  Get a list of runners with large sized shirts so they can choose a different size. Return an array named largeShirts that contains information about the runners that have a shirt size of L and log the result
 let largeShirts = [];
 
-
 const largeShirtSizes = runners.filter(function(shirtsizes) {
   return shirtsizes.shirt_size ==='L';
 });
@@ -105,6 +104,8 @@ let smallShirts = runners.filter(function(current) {
   return current.shirt_size === 'S';
 });
 
+console.log(smallShirts);
+
 // Problem 2
 // Last Name all caps
 
@@ -112,9 +113,12 @@ let lastNameCaps = runners.map(function(current) {
   return current.last_name.toUpperCase();
 });
 
+console.log(lastNameCaps);
+
 
 // Problem 3
+const emailAllCaps = runners.map(function(email) {
+  return email.email.toUpperCase();
+});
 
-// let emailList1 = [];
-// runners.forEach(person => emailList.push({id:person.id, first_name, email:person.email});
-// console.log(emailList);
+console.log(emailAllCaps);
